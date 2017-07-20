@@ -37,8 +37,12 @@ These files are suitable for creating either front and back logstash services to
 
 	DATA --> Logstash Ingest --> KAFKA <-- Logstash Parser --> Elasticsearch <-- Kibana
 
+It has been tried with docker-kafka image from https://github.com/wurstmeister/kafka-docker
 
 ### Build
 
+Using docker-compose it will build 2 docker containers, one for **ingest** and one for **parser**
+
+	docker-composer up
 
 
