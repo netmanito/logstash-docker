@@ -1,0 +1,15 @@
+version: '2'
+services:
+  ingest:
+    build: ./logstash-kafka
+    ports:
+      - 5046:5046
+    networks:
+      - esnet
+  parser:
+    build: ./logstash-tcpdump
+    networks:
+      - esnet
+
+networks:
+  esnet:
